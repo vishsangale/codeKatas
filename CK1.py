@@ -1,9 +1,10 @@
-ans = []
+# ans = []
 
 def answer(inp):
+    ans = []
     for e in inp:
         if isinstance(e, list):
-            answer(e)
+            ans += answer(e)
         else:
             ans.append(e)
     return ans
