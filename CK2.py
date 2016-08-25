@@ -49,10 +49,8 @@ class SinglyLinkedList():
         else:
             previous.next = previous.next.next
 
-        pass
-
-    def traverse(self):
-        current = self.head
+    def traverse(self, head):
+        current = head
         traversal = ''
         while current:
             traversal += str(current.data) + ' -> '
@@ -60,14 +58,6 @@ class SinglyLinkedList():
         print traversal
 
 
-sll = SinglyLinkedList()
-sll.insert(None, Node(4, None))
-sll.insert(sll.tail, Node(5, None))
-sll.insert(None, Node(6, None))
-sll.insert(sll.head, Node(7, None))
-sll.insert(sll.head.next, Node(9, None))
-sll.traverse()
-sll.delete(sll.head)
-sll.traverse()
-sll.delete(sll.head.next.next)
-sll.traverse()
+
+
+
