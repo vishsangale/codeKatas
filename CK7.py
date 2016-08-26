@@ -1,3 +1,8 @@
+""" Implementation of merge sort
+    Time complexity O(n*log(n))
+    Space complexity O(n) """
+
+
 def merge(l, r):
     nl = len(l)
     nr = len(r)
@@ -34,4 +39,3 @@ def merge_sort(array):
 
 
 print merge_sort([5, 4, 3, 2, 1])
-
