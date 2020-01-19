@@ -24,7 +24,7 @@ class Queue(object):
 
 
 class TestQueueMethods(unittest.TestCase):
-    def test_simple_push_pop(self):
+    def test_simple(self):
         queue = Queue()
         queue.enqueue(1)
 

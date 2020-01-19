@@ -60,7 +60,7 @@ class LinkedList(object):
         return str_val
 
 
-class TestLinkedMethodsMethods(unittest.TestCase):
+class TestLinkedListMethods(unittest.TestCase):
     def test_simple(self):
         ll = LinkedList()
         
@@ -80,13 +80,6 @@ class TestLinkedMethodsMethods(unittest.TestCase):
         self.assertEqual(True, ll.remove(4))
         self.assertEqual(True, ll.remove(3.14))
         self.assertEqual(False, ll.remove(3.14))
-
-
-
-    
-
-
-
 
 
 if __name__ == '__main__':
