@@ -1,5 +1,2 @@
-.idea/*.*
-.idea/copyright/
-.idea/inspectionProfiles/
-.idea/dictionaries/nightwalker.xml
+.idea/*
 *.pyc
