@@ -2,6 +2,8 @@ from linked_lists.linked_list import LinkedList
 
 
 def flatten_linked_list(ll):
+    if not ll:
+        return None
     flatten_list = LinkedList()
     current = ll
     while current:
