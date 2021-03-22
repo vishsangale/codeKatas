@@ -3,7 +3,6 @@ from linked_lists.linked_list import Node
 
 def delete_middle_ll(ll):
     if not ll or not ll.next:
-        del ll
         return None
     length = 0
     current = ll
