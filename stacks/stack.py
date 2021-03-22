@@ -12,7 +12,7 @@ class Stack(object):
     def __str__(self):
         str_val = ""
         for item in self.items:
-            str_val = f"{item}<-"
+            str_val += f"{item}<-"
         str_val = str_val[:-2]
         return str_val
 
