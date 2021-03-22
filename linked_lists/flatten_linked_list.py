@@ -1,16 +1,24 @@
-from linked_lists.linked_list import LinkedList
+from linked_lists.linked_list import Node
 
 
 def flatten_linked_list(ll):
     if not ll:
         return None
-    flatten_list = LinkedList()
+
     current = ll
+    flatten_list = None
+    prev_node = None
     while current:
-        current_vertical = current.root
+        current_vertical = current
         while current_vertical:
-            flatten_list.add(current_vertical.val)
+            new_node = Node(current_vertical.val)
+            if not flatten_list:
+                flatten_list = new_node
+            else:
+                prev_node.next = new_node
+            prev_node = new_node
             current_vertical = current_vertical.next
+
         if hasattr(current, 'right'):
             current = current.right
         else:
@@ -19,32 +27,27 @@ def flatten_linked_list(ll):
 
 
 def test_flatten():
-    a = LinkedList()
-    a.add(5)
-    a.add(7)
-    a.add(8)
-    a.add(30)
+    a = Node(5)
+    a.next = Node(7)
+    a.next.next = Node(8)
+    a.next.next.next = Node(30)
 
-    b = LinkedList()
-    b.add(10)
-    b.add(20)
+    b = Node(10)
+    b.next = Node(20)
 
-    c = LinkedList()
-    c.add(19)
-    c.add(22)
-    c.add(50)
+    c = Node(19)
+    c.next = Node(22)
+    c.next.next = Node(50)
 
-    d = LinkedList()
-    d.add(28)
-    d.add(35)
-    d.add(40)
-    d.add(45)
+    d = Node(28)
+    d.next = Node(35)
+    d.next.next = Node(40)
+    d.next.next.next = Node(45)
 
-    main_list = LinkedList()
-    main_list.root = a
-    main_list.root.right = b
-    main_list.root.right.right = c
-    main_list.root.right.right.right = d
+    main_list = a
+    main_list.right = b
+    main_list.right.right = c
+    main_list.right.right.right = d
 
-    ll = flatten_linked_list(main_list.root)
+    ll = flatten_linked_list(main_list)
     assert str(ll) == "5->7->8->30->10->20->19->22->50->28->35->40->45"

@@ -1,5 +1,5 @@
 """Find the middle of a given linked list"""
-from linked_lists.linked_list import LinkedList
+from linked_lists.linked_list import Node
 
 
 def get_middle_of_ll(ll):
@@ -23,34 +23,30 @@ def test_empty_list():
 
 
 def test_single_element_list():
-    ll = LinkedList()
-    ll.add(13)
-    assert get_middle_of_ll(ll.root) == 13
+    ll = Node(13)
+    assert get_middle_of_ll(ll) == 13
 
 
 def test_two_element_list():
-    ll = LinkedList()
-    ll.add(13)
-    ll.add(15)
-    assert get_middle_of_ll(ll.root) == 15
+    ll = Node(13)
+    ll.next = Node(15)
+    assert get_middle_of_ll(ll) == 15
 
 
 def test_odd_num_elements_list():
-    ll = LinkedList()
-    ll.add(13)
-    ll.add(15)
-    ll.add(17)
-    ll.add(19)
-    ll.add(21)
-    assert get_middle_of_ll(ll.root) == 17
+    ll = Node(13)
+    ll.next = Node(15)
+    ll.next.next = Node(17)
+    ll.next.next.next = Node(19)
+    ll.next.next.next = Node(21)
+    assert get_middle_of_ll(ll) == 17
 
 
 def test_even_num_elements_list():
-    ll = LinkedList()
-    ll.add(13)
-    ll.add(15)
-    ll.add(17)
-    ll.add(19)
-    ll.add(21)
-    ll.add(23)
-    assert get_middle_of_ll(ll.root) == 19
+    ll = Node(13)
+    ll.next = Node(15)
+    ll.next.next = Node(17)
+    ll.next.next.next = Node(19)
+    ll.next.next.next.next = Node(21)
+    ll.next.next.next.next.next = Node(23)
+    assert get_middle_of_ll(ll) == 19
