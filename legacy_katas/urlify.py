@@ -1,4 +1,3 @@
-
 def replace_space(str_list, idx):
     for char in "02%":
         str_list[idx] = char
@@ -24,6 +23,7 @@ def solve(in_str):
             cur_idx -= 3
 
     return "".join(str_list)
+
 
 inp = "Mr John S    "
 

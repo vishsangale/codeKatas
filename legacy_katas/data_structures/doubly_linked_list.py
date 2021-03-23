@@ -54,13 +54,14 @@ class DoublyLinkedList(object):
         return False
 
     def __str__(self):
-        str_val = ''
+        str_val = ""
         node = self.head
         while node:
-            str_val += str(node.val) + '<-->'
+            str_val += str(node.val) + "<-->"
             node = node.next
-        str_val += 'None'
+        str_val += "None"
         return str_val
+
 
 class TestDoublyLinkedListMethods(unittest.TestCase):
     def test_simple(self):
@@ -73,18 +74,18 @@ class TestDoublyLinkedListMethods(unittest.TestCase):
         self.assertEqual(True, ll.find(4))
 
         ll.add(5)
-        ll.add('Pi')
+        ll.add("Pi")
         ll.add(3.14)
-        ll.add('omega')
+        ll.add("omega")
         print(ll)
 
-        self.assertEqual(False, ll.remove('Omega'))
-        self.assertEqual(True, ll.remove('omega'))
+        self.assertEqual(False, ll.remove("Omega"))
+        self.assertEqual(True, ll.remove("omega"))
 
         self.assertEqual(3.14, ll.head.val)
         ll.remove(4)
         print(ll)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

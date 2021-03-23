@@ -12,7 +12,7 @@ def reverse(head):
         return head
     prev = None
     current = head
-    while (current):
+    while current:
         temp = current.next
         current.next = prev
         prev = current

@@ -1,5 +1,3 @@
-
-
 def reverseOnlyLetters(s):
 
     start = 0
@@ -8,6 +6,7 @@ def reverseOnlyLetters(s):
     for i in range(end, -1, -1):
         if s[i].isAlpha():
             reversed_string.append(s[i])
+
 
 def spiral_order(matrix):
     out = []
@@ -19,7 +18,7 @@ def spiral_order(matrix):
     col_begin = 0
     col_end = len(matrix)
 
-    while (row_begin < row_end and col_begin < col_end):
+    while row_begin < row_end and col_begin < col_end:
 
         for i in range(col_begin, col_end):
             out.append(matrix[row_begin][i])
@@ -31,6 +30,6 @@ def spiral_order(matrix):
 
         col_end -= 1
     return out
-print(spiral_order([[1,2,3],[4,5,6],[7,8,9]]))
 
 
+print(spiral_order([[1, 2, 3], [4, 5, 6], [7, 8, 9]]))

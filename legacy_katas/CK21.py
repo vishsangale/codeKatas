@@ -33,7 +33,7 @@ def overlap1(word1, word2):
     return set(word1).isdisjoint(set(word2))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     l = ["ABCW", "BAZ", "FOO", "BAR", "XTFN", "ABCDEF"] * 1000
     # t = time.time()
     # print max_multiple_length(l)

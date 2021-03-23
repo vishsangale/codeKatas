@@ -21,10 +21,10 @@ def transpose(A):
 
 def reverse_rows(A):
     for i in range(N):
-        for j in range(N/2):
+        for j in range(N / 2):
             temp = A[i][j]
-            A[i][j] = A[i][N-1-j]
-            A[i][N-1-j] = temp
+            A[i][j] = A[i][N - 1 - j]
+            A[i][N - 1 - j] = temp
 
 
 def rotate(A):

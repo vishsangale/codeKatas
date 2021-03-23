@@ -31,7 +31,7 @@ def solution2(a):
 def solution3(a):
     n = len(a)
     if n < 3:
-        raise Exception('Array is smaller than 3')
+        raise Exception("Array is smaller than 3")
     mn1 = mn2 = max(a)
     mx1 = mx2 = mx3 = min(a)
     for i in range(n):
@@ -53,6 +53,7 @@ def solution3(a):
     m1 = mn1 * mn2 * max(mx1, mx2, mx3)
     m2 = mx1 * mx2 * mx3
     return max(m1, m2)
+
 
 for i in range(10000):
     a = random.sample(range(-10, 10), 5)

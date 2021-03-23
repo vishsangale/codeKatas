@@ -16,10 +16,8 @@ def solution(arr, low, high):
             elif current_sum + arr[j] > high:
                 break
             if low <= current_sum <= high:
-                out.append(arr[i:j + 1])
+                out.append(arr[i : j + 1])
     return out
 
 
 print solution([3, 2, 0, -1, 4, 5], 2, 8)
-
-

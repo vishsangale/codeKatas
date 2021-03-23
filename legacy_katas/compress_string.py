@@ -4,7 +4,7 @@ from collections import Counter
 def compress(data):
     in_len = len(data)
     counter = Counter(data)
-    if 2*len(counter) >= in_len:
+    if 2 * len(counter) >= in_len:
         return data
 
     out = []

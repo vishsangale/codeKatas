@@ -18,10 +18,9 @@ def longest_substring(s):
             return s[i:]
 
 
-
-print longest_substring('caddkfdsa')
-print longest_substring('sst')
-print longest_substring('ssat')
-print longest_substring('dcbdcbx')
-print longest_substring('dcbdcbax')
-print longest_substring('google')
+print longest_substring("caddkfdsa")
+print longest_substring("sst")
+print longest_substring("ssat")
+print longest_substring("dcbdcbx")
+print longest_substring("dcbdcbax")
+print longest_substring("google")

@@ -1,7 +1,7 @@
 from Queue import Queue
 
 
-class Node():
+class Node:
     def __init__(self, data):
         self.data = data
         self.left = None
@@ -22,7 +22,7 @@ def level_traversal(root):
         print current.data
 
 
-class BST():
+class BST:
     def __init__(self):
         self.root = None
 
@@ -40,6 +40,3 @@ class BST():
             self.insert(root.right, item)
         else:
             root.right = Node(item)
-
-
-

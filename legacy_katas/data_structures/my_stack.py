@@ -14,13 +14,13 @@ class Stack(object):
         if self._container:
             return self._container.pop()
         else:
-            raise Exception('Empty Stack')
+            raise Exception("Empty Stack")
 
     def peak(self):
         if self._container:
             return self._container[-1]
         else:
-            raise Exception('Empty Stack')
+            raise Exception("Empty Stack")
 
 
 class TestStackMethods(unittest.TestCase):
@@ -38,15 +38,13 @@ class TestStackMethods(unittest.TestCase):
         self.assertEqual(2, stack.pop())
 
         stack.push(3)
-        stack.push('a')
+        stack.push("a")
         stack.push(4.5)
 
         self.assertEqual(4.5, stack.pop())
-        self.assertEqual('a', stack.pop())
+        self.assertEqual("a", stack.pop())
         self.assertEqual(3, stack.pop())
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()
-
-

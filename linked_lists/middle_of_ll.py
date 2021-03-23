@@ -10,7 +10,7 @@ def get_middle_of_ll(ll):
     while current:
         length += 1
         current = current.next
-    mid = (length // 2)
+    mid = length // 2
     current = ll
     while mid:
         current = current.next

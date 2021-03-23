@@ -22,12 +22,16 @@ def in_order_traversal(root):
         else:
             break
 
+
 def is_balanced(root):
     if root is None:
         return True
     else:
-        return (abs(find_height(root.left) - find_height(root.right)) < 2) and \
-               is_balanced(root.right) and is_balanced(root.left)
+        return (
+            (abs(find_height(root.left) - find_height(root.right)) < 2)
+            and is_balanced(root.right)
+            and is_balanced(root.left)
+        )
 
 
 def find_height(root):
@@ -36,7 +40,7 @@ def find_height(root):
     return 1 + max(find_height(root.left), find_height(root.right))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     t = BST()
     t.insert(t.root, 12)
     t.insert(t.root, 10)

@@ -2,7 +2,7 @@ import random
 
 
 def binary_search(a, x):
-    n = len(a)/2
+    n = len(a) / 2
     if x == a[n]:
         return True
     if x > a[n]:
@@ -11,6 +11,7 @@ def binary_search(a, x):
         return binary_search(a[:n], x)
     else:
         return False
+
 
 # binary_search([3, 4, 5, 7, 9], 3)
 for i in range(10000000):

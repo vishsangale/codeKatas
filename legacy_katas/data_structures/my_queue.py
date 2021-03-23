@@ -14,13 +14,13 @@ class Queue(object):
         if self._container:
             return self._container.pop(0)
         else:
-            raise Exception('Exmpty Queue')
+            raise Exception("Exmpty Queue")
 
     def front(self):
         if self._container:
             return self._container[0]
         else:
-            raise Exception('Empty Queue')
+            raise Exception("Empty Queue")
 
 
 class TestQueueMethods(unittest.TestCase):
@@ -40,11 +40,11 @@ class TestQueueMethods(unittest.TestCase):
         self.assertEqual(3, queue.front())
         self.assertEqual(3, queue.dequeue())
 
-        queue.enqueue('a')
+        queue.enqueue("a")
         queue.enqueue(4)
         queue.enqueue(3.14)
 
-        self.assertEqual('a', queue.dequeue())
+        self.assertEqual("a", queue.dequeue())
         self.assertEqual(4, queue.dequeue())
         self.assertEqual(3.14, queue.dequeue())
 
@@ -52,5 +52,5 @@ class TestQueueMethods(unittest.TestCase):
             queue.dequeue()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

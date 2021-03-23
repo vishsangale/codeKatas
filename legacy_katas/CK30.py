@@ -15,9 +15,9 @@ def solution(s, inp):
         return -1
     braces = []
     for i in range(len(s)):
-        if s[i] == '(':
+        if s[i] == "(":
             braces.append(i)
-        elif s[i] == ')':
+        elif s[i] == ")":
             item = braces.pop()
             if item == inp:
                 return i

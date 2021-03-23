@@ -4,10 +4,10 @@ from collections import Counter
 
 
 def solution(a):
-    last_str = ''
+    last_str = ""
     m = 0
     for char in a:
-        if last_str == '':
+        if last_str == "":
             last_str += char
         elif char not in last_str:
             last_str += char
@@ -15,7 +15,7 @@ def solution(a):
             i = last_str.index(char)
             m = max(m, len(last_str))
             last_str += char
-            last_str = last_str[i + 1:]
+            last_str = last_str[i + 1 :]
     return max(m, len(last_str))
 
 
@@ -33,4 +33,4 @@ def solution1(a):
     return m
 
 
-print solution('abxyabcxyzypqr'), solution1('abxyabcxyzypqr')
+print solution("abxyabcxyzypqr"), solution1("abxyabcxyzypqr")

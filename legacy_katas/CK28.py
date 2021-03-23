@@ -29,6 +29,7 @@ def solution(flight_length, movie_lengths):
     Space complexity O(1) if used in-place sorting algorithm like quick-sort
     """
 
+
 def solution1(flight_length, movie_lengths):
     movie_lengths.sort()
     left = 0
@@ -42,6 +43,7 @@ def solution1(flight_length, movie_lengths):
             right -= 1
 
     return False
+
 
 for i in range(100000):
     fl = random.randint(30, 200)

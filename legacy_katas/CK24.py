@@ -1,4 +1,3 @@
-
 def solution(a):
     m = 0
     current = a[0]
@@ -11,6 +10,7 @@ def solution(a):
             count += 1
             m = max(count, m)
     return m
+
 
 print solution([10, 4, 6, 2, 8, 9, 4])
 print solution([10, 9, 8, 7, 6, 5, 4])

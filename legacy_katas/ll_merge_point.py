@@ -1,5 +1,3 @@
-
-
 class Node:
     def __init__(self, _val, _next=None):
         self.val = _val
@@ -19,7 +17,7 @@ def find_merge_point(list1, list2):
         len2 += 1
         cur2 = cur2.next
 
-    bigger_list = list1 
+    bigger_list = list1
     if len1 > len2:
         bigger_list = list1
         smaller_list = list2
@@ -33,7 +31,6 @@ def find_merge_point(list1, list2):
         bigger_list = bigger_list.next
         diff -= 1
 
-
     while bigger_list:
         if bigger_list.val == smaller_list.val:
             return bigger_list.val
@@ -41,9 +38,3 @@ def find_merge_point(list1, list2):
         smaller_list = smaller_list.next
 
     return None
-
-
-
-
-
-

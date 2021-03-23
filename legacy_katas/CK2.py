@@ -1,13 +1,13 @@
 """ Implementation of singly linked list"""
 
 
-class Node():
+class Node:
     def __init__(self, data, next):
         self.data = data
         self.next = next
 
 
-class SinglyLinkedList():
+class SinglyLinkedList:
     def __init__(self):
         self.tail = None
         self.head = None
@@ -51,13 +51,8 @@ class SinglyLinkedList():
 
     def traverse(self, head):
         current = head
-        traversal = ''
+        traversal = ""
         while current:
-            traversal += str(current.data) + ' -> '
+            traversal += str(current.data) + " -> "
             current = current.next
         print traversal
-
-
-
-
-

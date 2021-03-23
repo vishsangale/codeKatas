@@ -1,5 +1,6 @@
 # ans = []
 
+
 def answer(inp):
     ans = []
     for e in inp:
@@ -10,4 +11,4 @@ def answer(inp):
     return ans
 
 
-print answer([[1,2,[3]],4,[5, [6], [7, 8]]])
+print answer([[1, 2, [3]], 4, [5, [6], [7, 8]]])

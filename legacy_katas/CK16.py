@@ -24,8 +24,9 @@ def find_max_seq_l(ls, unfit):
 
 
 def find_max_seq(ls):
-    ls.sort(key=lambda x:(x[0], x[1]))
+    ls.sort(key=lambda x: (x[0], x[1]))
     print ls
     return find_max_seq_l(ls, 0)
+
 
 print find_max_seq(ls)

@@ -19,4 +19,5 @@ def solution(a):
         prev, current_max = current_max, total
     return total
 
+
 print solution([6, 7, 2, 7])

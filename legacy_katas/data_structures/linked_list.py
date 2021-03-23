@@ -63,24 +63,24 @@ class LinkedList(object):
 class TestLinkedListMethods(unittest.TestCase):
     def test_simple(self):
         ll = LinkedList()
-        
+
         self.assertEqual(None, ll.head)
 
         ll.add(4)
         ll.add(3.14)
-        ll.add('Pi')
-        self.assertEqual('Pi', ll.head.value)
+        ll.add("Pi")
+        self.assertEqual("Pi", ll.head.value)
 
         self.assertEqual(False, ll.remove(8))
-        self.assertEqual(True, ll.remove('Pi'))
+        self.assertEqual(True, ll.remove("Pi"))
         self.assertEqual(3.14, ll.head.value)
 
-        self.assertEqual(False, ll.find('Pi'))
+        self.assertEqual(False, ll.find("Pi"))
         self.assertEqual(True, ll.find(4))
         self.assertEqual(True, ll.remove(4))
         self.assertEqual(True, ll.remove(3.14))
         self.assertEqual(False, ll.remove(3.14))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

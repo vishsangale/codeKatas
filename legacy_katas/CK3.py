@@ -1,6 +1,4 @@
-
-
-class BinaryMinHeap():
+class BinaryMinHeap:
     def __init__(self):
         self.heap = []
 
@@ -17,16 +15,17 @@ class BinaryMinHeap():
             return False
 
     def get_left_child(self, node_index):
-        return self.heap[2*node_index + 1]
+        return self.heap[2 * node_index + 1]
 
     def get_right_child(self, node_index):
         return self.heap[2 * node_index + 2]
 
     def get_parent(self, child_index):
-        return self.heap[(child_index - 1)/2]
+        return self.heap[(child_index - 1) / 2]
 
     def insert(self, element):
         pass
 
-heap  = BinaryMinHeap()
+
+heap = BinaryMinHeap()
 print heap.is_empty()

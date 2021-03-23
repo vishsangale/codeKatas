@@ -41,7 +41,7 @@ class BinarySearchTree(object):
             return
 
         self.inorder_helper(root.left)
-        print(root.val, end=',')
+        print(root.val, end=",")
         self.inorder_helper(root.right)
 
     def preorder(self):
@@ -52,7 +52,7 @@ class BinarySearchTree(object):
         if not root:
             return
 
-        print(root.val, end=',')
+        print(root.val, end=",")
         self.preorder_helper(root.left)
         self.preorder_helper(root.right)
 
@@ -66,7 +66,7 @@ class BinarySearchTree(object):
 
         self.postorder_helper(root.left)
         self.postorder_helper(root.right)
-        print(root.val, end=',')
+        print(root.val, end=",")
 
 
 class TestBinarySearchTreeMethods(unittest.TestCase):
@@ -85,7 +85,5 @@ class TestBinarySearchTreeMethods(unittest.TestCase):
         bst.postorder()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()
-
-

@@ -52,7 +52,7 @@ def solve2(str1, str2):
             if found_diff:
                 return False
             found_diff = True
-            if len(short) ==  len(long):
+            if len(short) == len(long):
                 short_idx += 1
         else:
             short_idx += 1
@@ -60,9 +60,7 @@ def solve2(str1, str2):
     return True
 
 
-
 print(solve2("pale", "ple"))
 print(solve2("pale", "bale"))
 print(solve2("pale", "bales"))
 print(solve2("pale", "pales"))
-

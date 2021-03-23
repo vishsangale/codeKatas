@@ -19,7 +19,7 @@ def flatten_linked_list(ll):
             prev_node = new_node
             current_vertical = current_vertical.next
 
-        if hasattr(current, 'right'):
+        if hasattr(current, "right"):
             current = current.right
         else:
             current = None
