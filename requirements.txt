@@ -1,1 +1,5 @@
+matplotlib
+networkx
+pydot
 pytest== 6.1.1
+

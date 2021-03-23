@@ -16,6 +16,9 @@ class Stack(object):
         str_val = str_val[:-2]
         return str_val
 
+    def is_empty(self) -> bool:
+        return len(self) == 0
+
     def pop(self) -> object:
         if not self.items:
             raise IndexError("Stack is empty, cannot pop item")
