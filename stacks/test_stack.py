@@ -2,17 +2,18 @@ import pytest
 
 from stack import Stack
 
+
 def test_basic_operations():
     s = Stack()
     with pytest.raises(IndexError):
         s.pop()
 
     with pytest.raises(IndexError):
-        s.peak()
+        s.peek()
 
     s.push(100)
 
-    assert 100 == s.peak()
+    assert 100 == s.peek()
 
     assert 1 == len(s)
 
@@ -38,4 +39,3 @@ def test_basic_operations():
     assert 3 == len(s)
 
     assert "a<-b<-d" == str(s)
-

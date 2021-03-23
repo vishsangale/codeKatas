@@ -21,7 +21,7 @@ class Stack(object):
             raise IndexError("Stack is empty, cannot pop item")
         return self.items.pop(-1)
 
-    def peak(self) -> object:
+    def peek(self) -> object:
         if not self.items:
             raise IndexError("Stack is empty, cannot pop item")
         return self.items[-1]
