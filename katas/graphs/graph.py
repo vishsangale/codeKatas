@@ -1,7 +1,7 @@
 
 class GraphNode(object):
-    def __init__(self):
-        self.val = None
+    def __init__(self, _val):
+        self.val = _val
         self.children = set()
 
     def add_edge(self, node):
