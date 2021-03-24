@@ -1,6 +1,6 @@
 import pytest
 
-from katas.tree.bst import BST
+from katas.trees.bst import BST
 
 def test_basic_operations():
     t = BST()

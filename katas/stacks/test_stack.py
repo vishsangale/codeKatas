@@ -1,6 +1,6 @@
 import pytest
 
-from stack import Stack
+from katas.stacks.stack import Stack
 
 
 def test_basic_operations():
