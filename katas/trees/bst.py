@@ -76,3 +76,39 @@ class BST(object):
         pos = graphviz_layout(g, prog="dot")
         nx.draw(g, pos, with_labels=True)
         plt.savefig("tree.png")
+
+    def _preorder(self, node):
+        if not node:
+            return
+
+        print(node.val)
+        self._preorder(node.left)
+        self._preorder(node.right)
+
+    def preorder(self):
+        """Preorder traversal of the BST"""
+        self._preorder(self.root)
+
+    def _inorder(self, node):
+        if not node:
+            return
+
+        self._inorder(node.left)
+        print(node.val)
+        self._inorder(node.right)
+
+    def inorder(self):
+        """Inorder traversal of the BST"""
+        self._inorder(self.root)
+
+    def _postorder(self, node):
+        if not node:
+            return
+
+        self._postorder(node.left)
+        self._postorder(node.right)
+        print(node.val)
+
+    def postorder(self):
+        """Postorder traversal of the BST"""
+        self._postorder(self.root)
