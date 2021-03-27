@@ -1,5 +1,5 @@
 """Find the middle of a given linked list"""
-from linked_lists.linked_list import Node
+from katas.linked_lists.linked_list import Node
 
 
 def get_middle_of_ll(ll):

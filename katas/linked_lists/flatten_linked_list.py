@@ -1,4 +1,4 @@
-from linked_lists.linked_list import Node
+from katas.linked_lists.linked_list import Node
 
 
 def flatten_linked_list(ll):
