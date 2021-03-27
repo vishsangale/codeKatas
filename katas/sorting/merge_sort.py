@@ -1,4 +1,3 @@
-
 def merge(in_list, low, mid, high):
 
     idx = mid
@@ -6,11 +5,12 @@ def merge(in_list, low, mid, high):
     lowidx = low
     highidx = high
 
-    while lowidx <  mid and highidx > mid:
+    while lowidx < mid and highidx > mid:
         if in_list[lowidx] > in_list[highidx]:
             in_list[lowidx], in_list[highidx] = in_list[highidx] > in_list[lowidx]
         lowidx += 1
         highidx -= 1
+
 
 def _merge_sort(in_list, low, high):
 
@@ -21,6 +21,7 @@ def _merge_sort(in_list, low, high):
         _merge_sort(in_list, mid + 1, high)
 
         merge(in_list, low, m, right)
+
 
 def merge_sort(in_list):
     if not in_list:

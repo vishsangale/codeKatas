@@ -22,4 +22,3 @@ def bfs(src: GraphNode, dst: GraphNode) -> bool:
             next_to_visit.push(child)
 
     return False
-

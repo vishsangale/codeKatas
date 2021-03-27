@@ -39,6 +39,7 @@ def test_basic_operations():
 
     assert 4 == q.peek()
 
+
 def test_queue_from_stacks():
     q = QueueFromStacks()
     with pytest.raises(IndexError):
@@ -69,4 +70,3 @@ def test_queue_from_stacks():
     q.enqueue(4)
 
     assert 4 == q.peek()
-

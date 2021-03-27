@@ -5,11 +5,13 @@ from networkx.drawing.nx_pydot import graphviz_layout
 
 from katas.stacks.stack import Stack
 
+
 class TreeNode(object):
     def __init__(self, _val) -> None:
         self.val = _val
         self.left = None
         self.right = None
+
 
 class BST(object):
     def __init__(self):
@@ -51,6 +53,7 @@ class BST(object):
             self._add(root.right, node)
         else:
             root.right = node
+
     def _create_nx_tree(self, root, g):
         if not root:
             return
@@ -60,7 +63,6 @@ class BST(object):
         if root.right:
             g.add_edge(root.val, root.right.val)
             self._create_nx_tree(root.right, g)
-
 
     def create_nx_tree(self):
         g = nx.Graph()

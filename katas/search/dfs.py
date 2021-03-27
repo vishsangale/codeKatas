@@ -20,7 +20,6 @@ def _dfs(src: GraphNode, dst: GraphNode, visited: set) -> bool:
     return False
 
 
-
 def dfs(src: GraphNode, dst: GraphNode) -> bool:
     if not src or not dst:
         return False
@@ -28,4 +27,3 @@ def dfs(src: GraphNode, dst: GraphNode) -> bool:
     visited = set()
 
     return _dfs(src, dst, visited)
-

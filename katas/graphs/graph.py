@@ -1,4 +1,3 @@
-
 class GraphNode(object):
     def __init__(self, _val):
         self.val = _val
@@ -13,5 +12,3 @@ class GraphNode(object):
 
     def get_childs(self):
         return self.children
-
-

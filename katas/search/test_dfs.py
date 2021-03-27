@@ -1,6 +1,6 @@
-
 from katas.graphs.graph import GraphNode
 from katas.search.dfs import dfs
+
 
 def test_dfs_search():
     src = None
@@ -21,4 +21,3 @@ def test_dfs_search():
     src.add_edge(dst)
 
     assert True == dfs(src, dst)
-

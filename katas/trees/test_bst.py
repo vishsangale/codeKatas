@@ -2,6 +2,7 @@ import pytest
 
 from katas.trees.bst import BST
 
+
 def test_basic_operations():
     t = BST()
     t.add(3)

@@ -1,6 +1,7 @@
 from katas.graphs.graph import GraphNode
 from katas.search.bfs import bfs
 
+
 def test_bfs_search():
     src = None
     dst = None
