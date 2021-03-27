@@ -14,8 +14,8 @@ class Queue(object):
         str_val = str_val[:-2]
         return str_val
 
-    def add(self, val):
-        """Add element to the end of the queue"""
+    def enqueue(self, val):
+        """Enqueue element to the end of the queue"""
         self.items.append(val)
 
     def peek(self) -> object:
@@ -24,8 +24,8 @@ class Queue(object):
             raise IndexError("Queue is empty, cannot peek item")
         return self.items[0]
 
-    def poll(self) -> object:
+    def dequeue(self) -> object:
         """Retrieve and remove element at the head of the queue"""
         if not self.items:
-            raise IndexError("Queue is empty, cannot poll item")
+            raise IndexError("Queue is empty, cannot dequeue item")
         return self.items.pop(0)
