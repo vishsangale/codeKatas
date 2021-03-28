@@ -4,13 +4,7 @@ import pydot
 from networkx.drawing.nx_pydot import graphviz_layout
 
 from katas.stacks.stack import Stack
-
-
-class TreeNode(object):
-    def __init__(self, _val) -> None:
-        self.val = _val
-        self.left = None
-        self.right = None
+from katas.trees.tree import TreeNode
 
 
 class BST(object):

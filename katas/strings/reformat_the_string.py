@@ -1,4 +1,3 @@
-
 """Given alphanumeric string s. (Alphanumeric string is a string consisting of lowercase English letters and digits).
 
 You have to find a permutation of the string where no letter is followed by another letter and no digit is followed by another digit. That is, no two adjacent characters have the same type.
@@ -6,6 +5,7 @@ You have to find a permutation of the string where no letter is followed by anot
 Return the reformatted string or return an empty string if it is impossible to reformat the string.
 
 """
+
 
 def reformat(s: str) -> str:
     if not s:
@@ -38,6 +38,7 @@ def reformat(s: str) -> str:
             ans[i] = small_list[s_idx]
             s_idx += 1
     return "".join(ans)
+
 
 def test_reformat():
 
