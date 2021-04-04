@@ -4,6 +4,7 @@ import pytest
 from katas.sorting.quick_sort import quick_sort
 from katas.sorting.merge_sort import merge_sort
 
+
 @pytest.mark.parametrize("fn", [quick_sort, merge_sort])
 def test_quick_sorting(fn):
     l = []

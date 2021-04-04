@@ -28,10 +28,9 @@ def merge_sort(in_list):
     if len(in_list) < 2:
         return in_list
 
-    mid =  len(in_list) // 2
+    mid = len(in_list) // 2
     left = in_list[:mid]
     right = in_list[mid:]
     merge_sort(left)
     merge_sort(right)
     merge(left, right, in_list)
-

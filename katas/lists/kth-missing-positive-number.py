@@ -15,7 +15,8 @@ def find_kth_positive(arr, k):
             missed_k += 1
     return arr[-1] + (k - missed_k + 1)
 
+
 def test_find_kth_positive():
     assert 9 == find_kth_positive([2, 3, 4, 7, 11], 5)
 
-    assert 6 == find_kth_positive([1,2,3,4], 2)
+    assert 6 == find_kth_positive([1, 2, 3, 4], 2)
