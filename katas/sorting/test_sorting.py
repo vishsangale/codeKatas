@@ -1,9 +1,11 @@
 import random
+import pytest
 
 from katas.sorting.quick_sort import quick_sort
+from katas.sorting.merge_sort import merge_sort
 
-
-def test_quick_sorting():
+@pytest.mark.parametrize("fn", [quick_sort, merge_sort])
+def test_quick_sorting(fn):
     l = []
 
     quick_sort(l)
@@ -13,11 +15,11 @@ def test_quick_sorting():
     l = random.sample(range(1, 100), k)
     assert k == len(l)
 
-    quick_sort(l)
+    fn(l)
 
     assert l == sorted(l)
 
     # pass sorted list
     l.sort()
-    quick_sort(l)
+    fn(l)
     assert l == sorted(l)

@@ -1,30 +1,37 @@
-def merge(in_list, low, mid, high):
+def merge(left, right, out):
+    out.clear()
 
-    idx = mid
+    l_idx = 0
+    r_idx = 0
 
-    lowidx = low
-    highidx = high
+    while l_idx < len(left) and r_idx < len(right):
+        if left[l_idx] < right[r_idx]:
+            out.append(left[l_idx])
+            l_idx += 1
+        else:
+            out.append(right[r_idx])
+            r_idx += 1
 
-    while lowidx < mid and highidx > mid:
-        if in_list[lowidx] > in_list[highidx]:
-            in_list[lowidx], in_list[highidx] = in_list[highidx] > in_list[lowidx]
-        lowidx += 1
-        highidx -= 1
+    while l_idx < len(left):
+        out.append(left[l_idx])
+        l_idx += 1
 
-
-def _merge_sort(in_list, low, high):
-
-    m = low + (high - 1) // 2
-
-    if high > 1:
-        _merge_sort(in_list, low, mid)
-        _merge_sort(in_list, mid + 1, high)
-
-        merge(in_list, low, m, right)
+    while r_idx < len(right):
+        out.append(right[r_idx])
+        r_idx += 1
 
 
 def merge_sort(in_list):
     if not in_list:
         return in_list
 
-    _merge_sort(in_list, 0, len(in_list) - 1)
+    if len(in_list) < 2:
+        return in_list
+
+    mid =  len(in_list) // 2
+    left = in_list[:mid]
+    right = in_list[mid:]
+    merge_sort(left)
+    merge_sort(right)
+    merge(left, right, in_list)
+
