@@ -106,3 +106,40 @@ class BST(object):
     def postorder(self):
         """Postorder traversal of the BST"""
         self._postorder(self.root)
+
+    def find_min(self, root):
+        node = root
+        min_val = node.val
+        while node:
+            min_val = node.val
+            node = node.left
+
+        return min_val
+
+    def _remove(self, root, key):
+        if not root:
+            return root
+
+        if not root.left and not root.right and root.val == key:
+            return None
+
+        if not root.left and root.right and root.val == key:
+            return root.right
+
+        if root.left and not root.right and root.val == key:
+            return root.left
+
+        if root.val == key:
+            min_val = self.find_min(root.right)
+            root.val = min_val
+            root.right = self._remove(root.right, min_val)
+        else:
+            if root.val > key:
+                root.left = self._remove(root.left, key)
+            else:
+                root.right = self._remove(root.right, key)
+
+        return root
+
+    def remove(self, key):
+        self.root = self._remove(self.root, key)
